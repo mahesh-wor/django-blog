@@ -36,7 +36,7 @@
                       {% if user.is_authenticated %}
                         <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
                         <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
-                        <a class="nav-item nav-link" href="{% url 'logout' %}">Login Out</a>
+                        <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                       {% else %}
                         <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
                         <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
@@ -63,9 +63,9 @@
                <h3>Django Blog</h3>
                <p class='text-muted'>Top Bloggers
                  <ul class="list-group">
-                   <a class="btn btn-info mb-1" href="#">invoron<a>
-                   <a class="btn btn-info mb-1" href="#">maheshwor<a>
-                   <a class="btn btn-info mb-1" href="#">monika<a>
+                   <a class="btn btn-info mb-1" href="user/invoron">invoron<a>  <!-- need dynamic -->
+                   <a class="btn btn-info mb-1" href="user/maheshwor">maheshwor<a>
+                   <a class="btn btn-info mb-1" href="user/monika">monika<a>
                  </ul>
                </p>
              </div>
