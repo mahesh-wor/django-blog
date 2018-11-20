@@ -10,6 +10,7 @@ cd django-blog
 ```
 
 ### Activate virtualenv & Install dependencies  
+
 ``` source <venv_location>/bin/acticate
 ```
 
