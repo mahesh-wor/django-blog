@@ -13,10 +13,12 @@ cd django-blog
 ``` source <venv_location>/bin/acticate
 ```
 
-```
-intall dependencies with pip3
-pip3 instal <name>
 
+### Install with pip3
+```
+pip3 install <name>
+```
+```
 Django              2.1    
 django-crispy-forms 1.7.2  
 Pillow              5.3.0  
