@@ -9,10 +9,13 @@ git clone https://github.com/mahesh-wor/django-blog
 cd django-blog
 ```
 
-### Install dependencies & activate virtualenv
+### Activate virtualenv & Install dependencies  
+``` source <venv_location>/bin/acticate
+```
 
 ```
 intall dependencies with pip3
+pip3 instal <name>
 
 Django              2.1    
 django-crispy-forms 1.7.2  
