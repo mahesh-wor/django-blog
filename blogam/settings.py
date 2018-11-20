@@ -120,5 +120,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+#defining profile pics location
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
+
+
 STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+#login redirect settings
+
+LOGIN_REDIRECT_URL = 'blog-home'
+
+#profile login LOGIN_REDIRECT_URL
+
+LOGIN_URL ='login'
