@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import UserRegisterForm, UserUpdateForm,ProfileUpdateForm
+from .forms import UserRegisterForm, UserUpdateForm,ProfileUpdateForm #already exits
 from django.contrib.auth.decorators import login_required #for checking profile
 # Create your views here.
 
@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required #for checking profile
 
 def register(request):
     if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
+        form = UserRegisterForm(request.POST) #already exit form python --> html
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
@@ -17,7 +17,7 @@ def register(request):
     else:
         form = UserRegisterForm()
 
-    return render(request,'users/register.html',{'form':form})
+    return render(request,'users/register.html',{'form':form}) #to access in template
 
 @login_required
 def profile(request):
