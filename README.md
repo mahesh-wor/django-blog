@@ -1,5 +1,7 @@
 # django-blog
-learning django while making this minimal blog.
+learning django following [this](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) video tutorial.
+![](img.png)
+
 ## Installing
 
 ### Clone the project
@@ -9,11 +11,17 @@ git clone https://github.com/mahesh-wor/django-blog
 cd django-blog
 ```
 
-### Install dependencies & activate virtualenv
-
+### Activate virtualenv & Install dependencies  
 ```
-intall dependencies with pip3
+source <venv_location>/bin/acticate
+```
 
+
+### Install with pip3
+```
+pip3 install <name>
+```
+```
 Django              2.1    
 django-crispy-forms 1.7.2  
 Pillow              5.3.0  
