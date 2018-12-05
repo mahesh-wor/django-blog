@@ -8,19 +8,17 @@
               <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
               <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
             </div>
-            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <div>
-            {% for tag in posts.tags %}
-            <button type="button" class="btn btn-secondary"><span class="badge">7</span></button>
-            {% endfor %}
-            <p>
 
             </div>
 
+            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
           </div>
         </article>
     {% endfor %}
+
+
     {% if is_paginated %}
 
       {% if page_obj.has_previous %}

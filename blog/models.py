@@ -5,12 +5,6 @@ from django.urls import reverse
 from django.contrib import admin
 
 # Create your models here.
-class Tag(models.Model):
-    tag_name=models.CharField(primary_key=True,max_length=20)
-    
-
-    def __str__(self):
-        return self.tag_name
 
 
 class Post(models.Model):  #fields here
@@ -19,15 +13,17 @@ class Post(models.Model):  #fields here
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    blog_tag=models.ManyToManyField(Tag)
-    #tags_content = models.CharField(max_length=2,choices=TAGS,default='django-blog')
+    tags = models.CharField(max_length=50,default="django-blog")
 
     def __str__(self):
         return self.title
 
-###for redirecting while new blog is created
+                                                                ###for redirecting while new blog is created
+
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk': self.pk})
+
+
 
 #class Person(models.Model):
 #   name =models.CharField(max_length=120)
