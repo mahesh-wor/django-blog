@@ -4,16 +4,13 @@ body {
   margin-top: 5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #444444;
-}
 
 ul {
   margin: 0;
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: #2b2b2b;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -31,7 +28,7 @@ ul {
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
+  border: 2px solid #000000;
   border-radius: 3px;
   margin-bottom: 20px;
 }
@@ -41,7 +38,7 @@ ul {
 }
 
 a.article-title:hover {
-  color: #428bca;
+  color: #2b2b2b;
   text-decoration: none;
 }
 

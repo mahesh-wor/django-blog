@@ -1,22 +1,26 @@
 {% extends "blog/base.html" %}
 {% block content %}
+
     {% for post in posts %}
         <article class="media content-section">
           <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
-              <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+              <a class="mr-2" href="{% url 'user-posts' post.author.username %}"><h2>{{ post.author }}</h2></a>
+              <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small><p>
             </div>
             <div>
-
+            <button type="button" class="btn btn-outline-dark ">Tags : </button><span>
+            <button type="button" class="btn btn-outline-dark ">{{post.tags}}</button></span><p>
             </div>
 
-            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
+              <h2><a class="article-title" href="{% url 'post-detail' post.id %}"><u>{{ post.title }}</u></a></h2>
+              <p class="article-content"><i>{{ post.content }}</i></p>
           </div>
         </article>
     {% endfor %}
+
+
 
 
     {% if is_paginated %}
